@@ -1,74 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tom Fox Portfolio</title>
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
-  <link rel='stylesheet' href='css/styles.css' type='text/css'>
-  <script>
-    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-    function openNav() {
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tom Fox Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+      openNav = () => {
+        console.log(window.scrollY)
+        if (document.getElementById("mySidenav").style.width && document.getElementById("mySidenav").style.width !== "0px") 
+          return closeNav()
+        if (document.getElementById("contactsButton").getAttribute("aria-expanded") === "true") 
+          closeContacts()
         document
-            .getElementById("mySidenav")
-            .style
-            .width = "250px";
+          .getElementById("mySidenav")
+          .style
+          .width = "12rem";
         document
-            .getElementById("main")
-            .style
-            .marginLeft = "250px";
+          .getElementById("main")
+          .style
+          .marginLeft = "12rem";
         document.body.style.backgroundColor = "#6d8487";
-    }
+      }
 
-    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-    function closeNav() {
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+      closeNav = () => {
         document
-            .getElementById("mySidenav")
-            .style
-            .width = "0";
+          .getElementById("mySidenav")
+          .style
+          .width = "0";
         document
-            .getElementById("main")
-            .style
-            .marginLeft = "0";
+          .getElementById("main")
+          .style
+          .marginLeft = "0";
         document.body.style.backgroundColor = "#cbf1f6";
-    }
-</script>
-</head>
-  <body>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a class="navheader" href="#welcome-section">Welcome</a>
+      }
+
+      closeContacts = () => {
+        document
+          .getElementById("contactsButton")
+          .classList
+          .add("collapsed")
+        document
+          .getElementById("contactsButton")
+          .setAttribute("aria-expanded", "false")
+        document
+          .getElementById("contactsToggler")
+          .classList
+          .remove("show")
+
+      }
+    </script>
+  </head>
+  <body class="">
+    <div id="mySidenav" class="side-nav bg-dark">
+      <a class="navheader" href="#welcomeSection">Welcome</a>
       <hr>
       <p class="navheader">Projects</p>
-      <a href="#my-projects">HTML</a>
+      <a href="#responsiveWebDesign">Responsive Web Design</a>
       <a href="#">JavaScript</a>
       <a href="#">React</a>
     </div>
     <div class="" id="main">
-      <nav class="top-nav navbar navbar-expand-sm d-flex flex-row justify-content-center">
+      <nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="fas fa-bars" onclick="openNav()" href="#"></a>
           </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
-          </li>
-        </ul>
+        <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
+          Contact
+        </button>
+        <div class="collapse navbar-collapse" id="contactsToggler">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-      <section id="welcome-section">
+      <section id="welcomeSection">
         <h1>Tom Fox</h1>
         <h2>Full Stack Portfolio</h2>
+      </section>
+      <section id="responsiveWebDesign" class="row d-flex justify-content-center">
+        <div class="col-md-9 my-auto">
+          <h1>Responsive Web Design Projects</h1>
+          <div class="bg-dark mt-5 px-0">
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="vwoeNY" style="height: 368px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Tribute Page">
+                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/vwoeNY">FCC Tribute Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                  <div class="carousel-caption d-none d-md-block">
+                    <a href="">
+                      <h2>Tribute Page</h2>
+                    </a>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="pXzPQV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Technical Documentation Page">
+                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/pXzPQV"> FCC Technical Documentation Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Technical Documentation Page</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="byXXMd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Product Landing Page">
+                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/byXXMd">FCC Product Landing Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+                  </p>
+                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                  <div class="carousel-caption d-none d-md-block">
+                    <h2>Product Landing Page</h2>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </body>
