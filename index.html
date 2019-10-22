@@ -9,94 +9,46 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
     <link rel='stylesheet' href='css/styles.css' type='text/css'>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-      openNav = () => {
-        console.log(window.scrollY)
-        if (document.getElementById("mySidenav").style.width && document.getElementById("mySidenav").style.width !== "0px") 
-          return closeNav()
-        if (document.getElementById("contactsButton").getAttribute("aria-expanded") === "true") 
-          closeContacts()
-        document
-          .getElementById("mySidenav")
-          .style
-          .width = "12rem";
-        document
-          .getElementById("main")
-          .style
-          .marginLeft = "12rem";
-        document.body.style.backgroundColor = "#6d8487";
-      }
-
-      /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-      closeNav = () => {
-        document
-          .getElementById("mySidenav")
-          .style
-          .width = "0";
-        document
-          .getElementById("main")
-          .style
-          .marginLeft = "0";
-        document.body.style.backgroundColor = "#cbf1f6";
-      }
-
-      closeContacts = () => {
-        document
-          .getElementById("contactsButton")
-          .classList
-          .add("collapsed")
-        document
-          .getElementById("contactsButton")
-          .setAttribute("aria-expanded", "false")
-        document
-          .getElementById("contactsToggler")
-          .classList
-          .remove("show")
-
-      }
-    </script>
   </head>
   <body class="">
     <div id="mySidenav" class="side-nav bg-dark">
-      <a class="navheader" href="#welcomeSection">Welcome</a>
+      <a class="navheader" onclick="scrollHandler('welcomeSection')">Welcome</a>
       <hr>
       <p class="navheader">Projects</p>
-      <a href="#responsiveWebDesign">Responsive Web Design</a>
+      <a onclick="scrollHandler('responsiveWebDesign')">Responsive Web Design</a>
       <a href="#">JavaScript</a>
       <a href="#">React</a>
     </div>
-    <div class="" id="main">
-      <nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="fas fa-bars" onclick="openNav()" href="#"></a>
-          </li>
-        </ul>
-        <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
+    <nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="fas fa-bars" onclick="openNav()"></a>
+        </li>
+      </ul>
+      <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
           Contact
         </button>
-        <div class="collapse navbar-collapse" id="contactsToggler">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="collapse navbar-collapse" id="contactsToggler">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="" id="main">
+
       <section id="welcomeSection">
         <h1>Tom Fox</h1>
         <h2>Full Stack Portfolio</h2>
       </section>
-      <section id="responsiveWebDesign" class="row d-flex justify-content-center">
+      <section id="responsiveWebDesign" class="d-flex justify-content-center">
         <div class="col-md-9 my-auto">
           <h1>Responsive Web Design Projects</h1>
           <div class="bg-dark mt-5 px-0">
@@ -108,7 +60,7 @@
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="vwoeNY" style="height: 368px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Tribute Page">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="vwoeNY" data-preview="true" style="height: 368px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Tribute Page">
                     <span>See the Pen <a href="https://codepen.io/tfox121/pen/vwoeNY">FCC Tribute Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
                   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -120,7 +72,7 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="pXzPQV" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Technical Documentation Page">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="pXzPQV" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Technical Documentation Page">
                     <span>See the Pen <a href="https://codepen.io/tfox121/pen/pXzPQV"> FCC Technical Documentation Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
                   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -130,7 +82,7 @@
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="byXXMd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Product Landing Page">
+                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="byXXMd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Product Landing Page">
                     <span>See the Pen <a href="https://codepen.io/tfox121/pen/byXXMd">FCC Product Landing Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
                   </p>
                   <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -154,4 +106,7 @@
       </section>
     </div>
   </body>
+  <script src='scripts/main.js'></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </html>
