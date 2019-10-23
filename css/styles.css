@@ -1,24 +1,52 @@
 body {
   font-family: 'Ubuntu', sans-serif;
+  color: #292b2c;
 }
 
 #welcomeSection {
-  padding-top: 50vh;
-  height: 100vh;
+  height: 101vh;
   text-align: center;
   background-color: #cbf1f6;
 }
 
+#welcomeSection > div > h1 {
+  font-size: 5em;
+}
+
 #responsiveWebDesign {
-  height: 100vh;
+  height: 101vh;
   width: 100%;
   text-align: center;
-  background-color: orange;
+  background-color: #f6d7cb;
   padding-right:0;
   padding-left:0;
   margin-right:auto;
   margin-left:auto;
-  min-height: 1000px;
+  min-height: 800px;
+}
+
+#javascript {
+  height: 101vh;
+  width: 100%;
+  text-align: center;
+  background-color: #e2cbf6;
+  padding-right:0;
+  padding-left:0;
+  margin-right:auto;
+  margin-left:auto;
+  min-height: 800px;
+}
+
+#frontEnd {
+  height: 101vh;
+  width: 100%;
+  text-align: center;
+  background-color: #f6edcb;
+  padding-right:0;
+  padding-left:0;
+  margin-right:auto;
+  margin-left:auto;
+  min-height: 800px;
 }
 
 .carousel-caption {
@@ -47,9 +75,14 @@ body {
   z-index: 2;
 }
 
-.top-nav a {
+.top-nav button, .top-nav a {
   text-decoration: none;
   transition: 0.3s;
+  color: #cbf1f6;
+}
+
+.top-nav button:hover, .top-nav a:hover {
+  color: #f1f1f1;
 }
 
 /* The side navigation menu */
@@ -66,12 +99,14 @@ body {
 }
 
 /* The navigation menu links */
-.side-nav a {
+.side-nav button {
   padding: 8px 8px 8px 25px;
   text-decoration: none;
-  color: #818181;
+  color: #cbf1f6;
   display: block;
   transition: 0.3s;
+  text-align: initial;
+  line-height: 1.5rem;
 }
 
 p.navheader, a.navheader {
@@ -79,7 +114,7 @@ p.navheader, a.navheader {
 }
 
 .side-nav hr {
-  background-color: white;
+  background-color: #cbf1f6;
 }
 
 .side-nav p {
@@ -91,7 +126,7 @@ p.navheader, a.navheader {
 }
 
 /* When you mouse over the navigation links, change their color */
-.side-nav a:hover {
+.side-nav button:hover {
   color: #f1f1f1;
 }
 
@@ -105,4 +140,19 @@ p.navheader, a.navheader {
 @media screen and (max-height: 450px) {
   .side-nav {padding-top: 11px;}
   .side-nav a {font-size: 15px;}
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button:focus {
+  outline: none;
+  border: none;
 }

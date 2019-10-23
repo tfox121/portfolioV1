@@ -42,7 +42,23 @@ const closeContacts = () => {
 }
 
 const scrollHandler = (elementId) => {
-  console.log(elementId)
   const elmnt = document.getElementById(elementId)
-  elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  elmnt.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  closeNav()
 }
+
+$(function() {
+  $(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    $('.section').each(function() {
+      var topDistance = $(this).offset().top;
+      if ( (topDistance) < scrollTop ) {
+        $('.top-nav button').css('color',$(this).attr('data-color'))
+        $('.top-nav a').css('color',$(this).attr('data-color'))
+        $('.side-nav button').css('color',$(this).attr('data-color'))
+        $('.side-nav hr').css('background-color',$(this).attr('data-color'))
+        $('.carousel-caption h2').css('color',$(this).attr('data-color'))
+      }
+    });
+  });
+})

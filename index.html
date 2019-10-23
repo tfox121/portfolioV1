@@ -9,104 +9,115 @@
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
     <link rel='stylesheet' href='css/styles.css' type='text/css'>
+    <link rel='stylesheet' href='css/normalize.css' type='text/css'>
   </head>
   <body class="">
     <div id="mySidenav" class="side-nav bg-dark">
-      <a class="navheader" onclick="scrollHandler('welcomeSection')">Welcome</a>
+      <button class="navheader" onclick="scrollHandler('welcomeSection')">Welcome</button>
       <hr>
       <p class="navheader">Projects</p>
-      <a onclick="scrollHandler('responsiveWebDesign')">Responsive Web Design</a>
-      <a href="#">JavaScript</a>
-      <a href="#">React</a>
-    </div>
-    <nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="fas fa-bars" onclick="openNav()"></a>
-        </li>
-      </ul>
-      <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
+      <button class="text-nowrap" onclick="scrollHandler('responsiveWebDesign')">Responsive Web</br>Design</button>
+    <button class="text-nowrap" onclick="scrollHandler('javascript')">JS Algorithms</br>& Data Structures</button>
+  <button class="text-nowrap" onclick="scrollHandler('frontEnd')">Front End Libraries</br>(React & BootStrap)</button>
+</div>
+<nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
+<ul class="navbar-nav mr-auto">
+  <li class="nav-item">
+    <button class="fas fa-bars" onclick="openNav()"></button>
+  </li>
+</ul>
+<button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
           Contact
         </button>
-      <div class="collapse navbar-collapse" id="contactsToggler">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="" id="main">
+<div class="collapse navbar-collapse" id="contactsToggler">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
+    </li>
+  </ul>
+</div>
+</nav>
+<div class="" id="main">
 
-      <section id="welcomeSection">
-        <h1>Tom Fox</h1>
-        <h2>Full Stack Portfolio</h2>
-      </section>
-      <section id="responsiveWebDesign" class="d-flex justify-content-center">
-        <div class="col-md-9 my-auto">
-          <h1>Responsive Web Design Projects</h1>
-          <div class="bg-dark mt-5 px-0">
-            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="vwoeNY" data-preview="true" style="height: 368px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Tribute Page">
-                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/vwoeNY">FCC Tribute Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <div class="carousel-caption d-none d-md-block">
-                    <a href="">
-                      <h2>Tribute Page</h2>
-                    </a>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="pXzPQV" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Technical Documentation Page">
-                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/pXzPQV"> FCC Technical Documentation Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2>Technical Documentation Page</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <p class="codepen" data-height="700" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="byXXMd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Product Landing Page">
-                    <span>See the Pen <a href="https://codepen.io/tfox121/pen/byXXMd">FCC Product Landing Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                  <div class="carousel-caption d-none d-md-block">
-                    <h2>Product Landing Page</h2>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                  </div>
-                </div>
-              </div>
-              <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+<section id="welcomeSection" class="section d-flex justify-content-center py-5" data-color="#cbf1f6">
+    <div class="col-md-8 my-auto">
+  <h1>Tom Fox</h1>
+  <h2>Full Stack Portfolio</h2>
+  <div>
+</section>
+<section id="responsiveWebDesign" class="section d-flex justify-content-center py-5" data-color="#f6d7cb">
+  <div class="col-md-8 my-auto">
+    <h1>Responsive Web Design Projects</h1>
+    <div class="bg-dark mt-5 px-0">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="vwoeNY" data-preview="true" style="height: 368px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Tribute Page">
+              <span>See the Pen <a href="https://codepen.io/tfox121/pen/vwoeNY">FCC Tribute Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Tribute Page</h2>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="pXzPQV" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Technical Documentation Page">
+              <span>See the Pen <a href="https://codepen.io/tfox121/pen/pXzPQV"> FCC Technical Documentation Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Technical Documentation Page</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <p class="codepen" data-height="500" data-theme-id="0" data-default-tab="html,result" data-user="tfox121" data-slug-hash="byXXMd" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="FCC Product Landing Page">
+              <span>See the Pen <a href="https://codepen.io/tfox121/pen/byXXMd">FCC Product Landing Page</a> by tfox121 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Product Landing Page</h2>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
             </div>
           </div>
         </div>
-      </section>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
     </div>
-  </body>
-  <script src='scripts/main.js'></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </div>
+</section>
+<section id="javascript" class="section d-flex justify-content-center py-5" data-color="#e2cbf6">
+  <div class="col-md-8 my-auto">
+    <h1>JavaScript Algorithms & Data Structures</h1>
+  </div>
+</section>
+<section id="frontEnd" class="section d-flex justify-content-center py-5" data-color="#f6edcb">
+  <div class="col-md-8 my-auto">
+    <h1>Front End Libraries (React & BootStrap)</h1>
+  </div>
+</section>
+</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src='scripts/main.js'></script>
 </html>
