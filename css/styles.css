@@ -33,7 +33,7 @@ h2 {
 }
 
 .section {
-  height: 101vh;
+  min-height: 101vh;
   width: 100%;
   text-align: center;
   padding-right: 2vw;
@@ -203,4 +203,19 @@ button {
 button:focus {
   outline: none;
   border: none;
+}
+
+div > a > img {
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  div.mobile { display: none; }
+  div.desktop { display: block; }
+}
+
+
+@media screen and (max-width: 768px) {
+  div.mobile { display: block; }
+  div.desktop { display: none; }
 }
