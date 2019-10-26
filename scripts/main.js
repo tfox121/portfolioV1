@@ -6,11 +6,11 @@ const openNav = () => {
   document
     .getElementById("mySidenav")
     .style
-    .width = "12rem";
+    .width = "12em";
   document
     .getElementById("main")
     .style
-    .marginLeft = "12rem";
+    .marginLeft = "12em";
   document.body.style.backgroundColor = "#6d8487";
 }
 

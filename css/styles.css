@@ -4,64 +4,112 @@ body {
 }
 
 #welcomeSection {
-  height: 101vh;
   text-align: center;
-  background-color: #cbf1f6;
 }
 
 #welcomeSection > div > h1 {
   font-size: 5em;
+  padding-bottom: 2vh;
+  color: #292b2c;
 }
 
-#responsiveWebDesign {
+h2 {
+  font-size: 2em;
+}
+
+
+.skills {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  font-size: 3em;
+  grid-column-gap: 0.25em;
+  grid-row-gap: 0.5em;
+}
+
+.skills-wrapper {
+  margin: 1vw;
+}
+
+.section {
   height: 101vh;
   width: 100%;
   text-align: center;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.section .project-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 3em 2em 3em 2em;
+}
+
+section[data-color="#cbf1f6"] {
+  color: #cbf1f6;
+  background-color: #cbf1f6;
+}
+
+section[data-color="#f6d7cb"] {
+  color: #f6d7cb;
   background-color: #f6d7cb;
-  padding-right:0;
-  padding-left:0;
-  margin-right:auto;
-  margin-left:auto;
-  min-height: 800px;
 }
 
-#javascript {
-  height: 101vh;
-  width: 100%;
-  text-align: center;
-  background-color: #e2cbf6;
-  padding-right:0;
-  padding-left:0;
-  margin-right:auto;
-  margin-left:auto;
-  min-height: 800px;
-}
-
-#frontEnd {
-  height: 101vh;
-  width: 100%;
-  text-align: center;
+section[data-color="#f6edcb"] {
+  color: #f6edcb;
   background-color: #f6edcb;
-  padding-right:0;
-  padding-left:0;
-  margin-right:auto;
-  margin-left:auto;
-  min-height: 800px;
+}
+
+section[data-color="#e2cbf6"] {
+  color: #e2cbf6;
+  background-color: #e2cbf6;
+}
+
+h3 {
+  font-size: 2em;
+  padding-bottom: 0.75em;
+}
+
+.glitch-embed-wrap {
+  height: 75vh;
+  min-height: 30em;
+  width: 90%;
+}
+
+.project-wrapper ul {
+  margin-left: -1em;
+}
+
+.carousel-inner { 
+  padding-right: 33%;
+  z-index: 0;
 }
 
 .carousel-caption {
-  position: relative;
-  left: 0;
-  top: 0;
+  position: absolute;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  bottom:0;
+  padding-left: 3em;
+  padding-right: 3em;
+  padding-top: 50%;
+  padding-bottom: 50%;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  height: 4rem;
-  width: 4rem;
+  height: 2em;
+  width: 2em;
   outline: black;
   background-size: 100%, 100%;
   filter: invert(100%);
+  z-index: 1;
 }
 
 #carouselExampleCaptions a {
@@ -71,7 +119,7 @@ body {
   }
 
 .top-nav {
-  font-size: 23px;
+  font-size: 1em;
   z-index: 2;
 }
 
@@ -100,13 +148,13 @@ body {
 
 /* The navigation menu links */
 .side-nav button {
-  padding: 8px 8px 8px 25px;
+  padding: 8px 8px 8px 20px;
   text-decoration: none;
   color: #cbf1f6;
   display: block;
   transition: 0.3s;
   text-align: initial;
-  line-height: 1.5rem;
+  line-height: 1.5em;
 }
 
 p.navheader, a.navheader {
@@ -118,10 +166,11 @@ p.navheader, a.navheader {
 }
 
 .side-nav p {
-  padding: 8px 8px 0px 25px;
+  padding: 8px 8px 0px 20px;
   text-decoration: none;
-  color: #818181;
+  color: #ffffff;
   display: block;
+  font-size: 0.8em;
   transition: 0.3s;
 }
 
@@ -133,7 +182,6 @@ p.navheader, a.navheader {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-left .5s;
-  background-color: red;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) */
