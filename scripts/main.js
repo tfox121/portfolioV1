@@ -1,32 +1,46 @@
 const openNav = () => {
-  if (document.getElementById("mySidenav").style.width && document.getElementById("mySidenav").style.width !== "0px") 
-    return closeNav()
-  if (document.getElementById("contactsButton").getAttribute("aria-expanded") === "true") 
+  // Close side nav if open
+  if (document.getElementById("sideNav").style.width && document.getElementById("sideNav").style.width !== "0px") {
+    closeNav()
+    return
+  }
+
+  // Close contacts dropdown if open before opening side nav
+  if (document.getElementById("contactsButton").getAttribute("aria-expanded") === "true") {
     closeContacts()
+  }
+  
   document
-    .getElementById("mySidenav")
+    .getElementById("sideNav")
     .style
     .width = "12em";
   document
     .getElementById("main")
     .style
     .marginLeft = "12em";
-  document.body.style.backgroundColor = "#6d8487";
+  const sections = document.querySelectorAll('section')
+  Array.from(sections).forEach((section) => {
+    section.style.filter = "brightness(80%)"
+  })
 }
 
-/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 const closeNav = () => {
   document
-    .getElementById("mySidenav")
+    .getElementById("sideNav")
     .style
     .width = "0";
   document
     .getElementById("main")
     .style
     .marginLeft = "0";
-  document.body.style.backgroundColor = "#cbf1f6";
+  document.body.style.backgroundColor = "#cbf1f6"
+  const sections = document.querySelectorAll('section')
+  Array.from(sections).forEach((section) => {
+    section.style.filter = "brightness(100%)"
+  })
 }
 
+// Close contacts function to work like Bootstrap collapse
 const closeContacts = () => {
   document
     .getElementById("contactsButton")
@@ -41,24 +55,48 @@ const closeContacts = () => {
     .remove("show")
 }
 
+// Scroll smoothly to element
 const scrollHandler = (elementId) => {
   const elmnt = document.getElementById(elementId)
   elmnt.scrollIntoView({ behavior: 'smooth', block: 'center' })
   closeNav()
 }
 
-$(function() {
-  $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    $('.section').each(function() {
-      var topDistance = $(this).offset().top;
-      if ( (topDistance) < scrollTop ) {
-        $('.top-nav button').css('color',$(this).attr('data-color'))
-        $('.top-nav a').css('color',$(this).attr('data-color'))
-        $('.side-nav button').css('color',$(this).attr('data-color'))
-        $('.side-nav hr').css('background-color',$(this).attr('data-color'))
-        $('.carousel-caption h2').css('color',$(this).attr('data-color'))
-      }
-    });
-  });
+// Change colour of nav elements according to window location
+const colorChanger = () => {
+  const sections = document.querySelectorAll('section')
+  Array.from(sections).forEach((section) => {
+    if (section.offsetTop <= window.scrollY) {
+      Array
+      .from(document.querySelectorAll('#topNav button, #topNav a, #topNav a, #sideNav button'))
+      .forEach((element) => {
+        element.style.color = section.getAttribute('data-color')
+      })
+      Array
+      .from(document.querySelectorAll('#sideNav hr'))
+      .forEach((element) => {
+        element.style.backgroundColor = section.getAttribute('data-color')
+      })
+    }
+  })
+}
+
+window.addEventListener('scroll', (event) => {
+  colorChanger()
 })
+
+// Peek side nav element
+window.onload = () => {
+  document.querySelectorAll('#sideNav')[0].style.transition = "1s"
+  document.querySelectorAll('#main')[0].style.transition = "margin-left 1s"
+  openNav()
+  setTimeout(() => {
+    closeNav()
+    document.querySelectorAll('#sideNav')[0].style.transition = "0.5s"
+    document.querySelectorAll('#main')[0].style.transition = "margin-left 0.5s"
+  }, 2000)
+
+}
+
+colorChanger()
+

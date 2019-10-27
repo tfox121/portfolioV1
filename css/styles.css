@@ -3,10 +3,6 @@ body {
   color: #292b2c;
 }
 
-#welcomeSection {
-  text-align: center;
-}
-
 #welcomeSection > div > h1 {
   font-size: 5em;
   padding-bottom: 2vh;
@@ -16,7 +12,6 @@ body {
 h2 {
   font-size: 2em;
 }
-
 
 .skills {
   display: inline-grid;
@@ -28,12 +23,8 @@ h2 {
   grid-row-gap: 0.5em;
 }
 
-.skills-wrapper {
-  margin: 1vw;
-}
-
-.section {
-  min-height: 101vh;
+section {
+  min-height: 100vh;
   width: 100%;
   text-align: center;
   padding-right: 2vw;
@@ -44,9 +35,7 @@ h2 {
   margin-left:auto;
 }
 
-.section .project-wrapper {
-  display: flex;
-  flex-direction: row;
+section .project-wrapper {
   padding: 3em 2em 3em 2em;
 }
 
@@ -85,72 +74,38 @@ h3 {
   margin-left: -1em;
 }
 
-.carousel-inner { 
-  padding-right: 33%;
-  z-index: 0;
-}
+/* NAV ELEMENTS */
 
-.carousel-caption {
-  position: absolute;
-  left: 100%;
-  width: 50%;
-  height: 100%;
-  bottom:0;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-top: 50%;
-  padding-bottom: 50%;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  height: 2em;
-  width: 2em;
-  outline: black;
-  background-size: 100%, 100%;
-  filter: invert(100%);
-  z-index: 1;
-}
-
-#carouselExampleCaptions a {
-  height: 26%;
-  top: 33%;
-  width: 86px;
-  }
-
-.top-nav {
-  font-size: 1em;
-  z-index: 2;
-}
-
-.top-nav button, .top-nav a {
+#topNav button, #topNav a {
   text-decoration: none;
   transition: 0.3s;
-  color: #cbf1f6;
+  color: black;
 }
 
-.top-nav button:hover, .top-nav a:hover {
+#topNav button:hover, #topNav a:hover {
   color: #f1f1f1;
 }
 
 /* The side navigation menu */
-.side-nav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+#sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
   left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 80px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the side-nav */
+  overflow-x: hidden;
+  padding-top: 80px;
+  transition: 0.5s;
 }
 
-/* The navigation menu links */
+#main {
+  transition: margin-left 0.5s;
+}
+
 .side-nav button {
   padding: 8px 8px 8px 20px;
   text-decoration: none;
-  color: #cbf1f6;
   display: block;
   transition: 0.3s;
   text-align: initial;
@@ -159,10 +114,6 @@ h3 {
 
 p.navheader, a.navheader {
   font-size: 26px;
-}
-
-.side-nav hr {
-  background-color: #cbf1f6;
 }
 
 .side-nav p {
@@ -174,22 +125,11 @@ p.navheader, a.navheader {
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .side-nav button:hover {
   color: #f1f1f1;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the side-nav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .side-nav {padding-top: 11px;}
-  .side-nav a {font-size: 15px;}
-}
-
+/* Remove button styling */
 button {
 	background: none;
 	color: inherit;
@@ -203,19 +143,4 @@ button {
 button:focus {
   outline: none;
   border: none;
-}
-
-div > a > img {
-  width: 100%;
-}
-
-@media screen and (min-width: 769px) {
-  div.mobile { display: none; }
-  div.desktop { display: block; }
-}
-
-
-@media screen and (max-width: 768px) {
-  div.mobile { display: block; }
-  div.desktop { display: none; }
 }

@@ -10,10 +10,9 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel='stylesheet' href='css/styles.css' type='text/css'>
-    <link rel='stylesheet' href='css/normalize.css' type='text/css'>
   </head>
   <body class="">
-    <div id="mySidenav" class="side-nav bg-dark">
+    <div id="sideNav" class="side-nav bg-dark">
       <button class="navheader" onclick="scrollHandler('welcomeSection')">Welcome</button>
       <hr>
       <p class="navheader text-nowrap">Personal Projects</p>
@@ -24,203 +23,202 @@
       <button class="text-nowrap" onclick="scrollHandler('exerciseTracker')">Exercise Tracker</button>
       <button class="text-nowrap" onclick="scrollHandler('choroplethMap')">Chloropleth Map</button>
       <button class="text-nowrap" onclick="scrollHandler('jsCalculator')">JavaScript Calculator</button>
+    </div>
+    <nav id="topNav" class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <button class="fas fa-bars" onclick="openNav()"></button>
+        </li>
+      </ul>
+      <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
+        Contact
+      </button>
+      <div class="collapse navbar-collapse" id="contactsToggler">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
+          </li>
+        </ul>
       </div>
-  <nav class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
-  <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <button class="fas fa-bars" onclick="openNav()"></button>
-    </li>
-  </ul>
-  <button id="contactsButton" class="btn btn-secondary navbar-toggler" type="button" onclick="closeNav()" data-toggle="collapse" data-target="#contactsToggler" aria-controls="contactsToggler" aria-expanded="false" aria-label="Toggle contacts">
-            Contact
-          </button>
-  <div class="collapse navbar-collapse" id="contactsToggler">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="https://github.com/tfox121" target="_blank">GitHub</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.linkedin.com/in/thomas-fox-00327225/" target="_blank">LinkedIn</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
-      </li>
-    </ul>
-  </div>
-  </nav>
-  <div class="" id="main">
-
-  <section id="welcomeSection" class="section d-flex justify-content-center py-5" data-color="#cbf1f6">
-    <div class="col-lg-6 my-auto">
-      <h1>Tom Fox</h1>
-      <div class="skills-wrapper row justify-content-center p-4 bg-dark shadow rounded">
-        <div class="col-sm-6 pb-5 pt-4">
-          <h2 class="pb-4">Front End</h2>
-          <div class="skills">
-            <!-- HTML -->
-            <i class="devicon-html5-plain-wordmark"></i>
-            <!-- CSS -->
-            <i class="devicon-css3-plain-wordmark"></i>
-            <!-- SASS -->
-            <i class="devicon-sass-original"></i>
-            <!-- d3 -->
-            <i class="devicon-d3js-plain"></i>
-            <!-- Javascript -->
-            <i class="devicon-javascript-plain"></i>
-            <!-- JQuery -->
-            <i class="devicon-jquery-plain-wordmark"></i>
-            <!-- ReactJS -->
-            <i class="devicon-react-original-wordmark"></i>
-            <!-- Redux -->
-            <span class="iconify" data-icon="simple-icons:redux" data-inline="false"></span>
+    </nav>
+    <div class="" id="main">
+      <section id="welcomeSection" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
+        <div class="col-lg-6 my-auto">
+          <h1>Tom Fox</h1>
+          <div id="skillsWrapper" class="row justify-content-center p-4 bg-dark shadow rounded m-3">
+            <div class="col-sm-6 pb-5 pt-4">
+              <h2 class="pb-4">Front End</h2>
+              <div class="skills">
+                <!-- HTML -->
+                <i class="devicon-html5-plain-wordmark"></i>
+                <!-- CSS -->
+                <i class="devicon-css3-plain-wordmark"></i>
+                <!-- SASS -->
+                <i class="devicon-sass-original"></i>
+                <!-- d3 -->
+                <i class="devicon-d3js-plain"></i>
+                <!-- Javascript -->
+                <i class="devicon-javascript-plain"></i>
+                <!-- JQuery -->
+                <i class="devicon-jquery-plain-wordmark"></i>
+                <!-- ReactJS -->
+                <i class="devicon-react-original-wordmark"></i>
+                <!-- Redux -->
+                <span class="iconify" data-icon="simple-icons:redux" data-inline="false"></span>
+              </div>
+            </div>
+            <div class="col-sm-6 pb-5 pt-4">
+              <h2 class="pb-4">Back End</h2>
+              <div class="skills">
+                <!-- HTML -->
+                <i class="devicon-nodejs-plain"></i>
+                <!-- CSS -->
+                <i class="devicon-express-original"></i>
+                <!-- SASS -->
+                <i class="devicon-mongodb-plain-wordmark"></i>
+                <!-- Bootstrap -->
+                <i class="devicon-postgresql-plain-wordmark"></i>
+                <!-- Javascript -->
+                <i class="devicon-mocha-plain"></i>
+                <!-- JQuery -->
+                <i class="devicon-drupal-plain-wordmark"></i>
+                <!-- ReactJS -->
+                <i class="devicon-linux-plain"></i>
+                <!-- Redux -->
+                <i class="devicon-git-plain"></i>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-sm-6 pb-5 pt-4">
-          <h2 class="pb-4">Back End</h2>
-          <div class="skills">
-            <!-- HTML -->
-            <i class="devicon-nodejs-plain"></i>
-            <!-- CSS -->
-            <i class="devicon-express-original"></i>
-            <!-- SASS -->
-            <i class="devicon-mongodb-plain-wordmark"></i>
-            <!-- Bootstrap -->
-            <i class="devicon-postgresql-plain-wordmark"></i>
-            <!-- Javascript -->
-            <i class="devicon-mocha-plain"></i>
-            <!-- JQuery -->
-            <i class="devicon-drupal-plain-wordmark"></i>
-            <!-- ReactJS -->
-            <i class="devicon-linux-plain"></i>
-            <!-- Redux -->
-            <i class="devicon-git-plain"></i>
+      </section>
+      <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+        <div class="col-lg-9 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row">
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+              <iframe
+                src="https://glitch.com/embed/#!/embed/todo-list-tf?path=package.json&previewSize=100"
+                title="todo-list-tf on Glitch"
+                allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+                style="height: 100%; width: 100%; border: 0;">
+              </iframe>
+            </div>
+            <div class="col-md-3 mx-auto text-left">
+              <h3>Personal Project - To Do List</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+                <a href="https://todo-list-tf.glitch.me" target="_blank"><img class="w-100" src="toDoList.PNG"></img></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="toDoList" class="section d-flex justify-content-center py-5" data-color="#f6d7cb">
-    <div class="col-lg-9 my-auto">
-      <div class="project-wrapper row card bg-dark flex-lg-row">
-        <div class="glitch-embed-wrap col-md-9 mx-auto desktop">
-          <iframe
-            src="https://glitch.com/embed/#!/embed/todo-list-tf?path=package.json&previewSize=100"
-            title="todo-list-tf on Glitch"
-            allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-            style="height: 100%; width: 100%; border: 0;">
-          </iframe>
-        </div>
-        <div class="col-md-3 mx-auto text-left">
-        <h3>Personal Project - To Do List</h3>
-        <div class="proj-img-wrap col-md-9 mx-auto mobile bg-light my-3">
-          <a href="https://todo-list-tf.glitch.me" target="_blank"><img src="toDoList.PNG"></img></a>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
-        <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="stockPriceChecker" class="section d-flex justify-content-center py-5" data-color="#e2cbf6">
-    <div class="col-lg-9 my-auto">
-      <div class="project-wrapper row card bg-dark flex-lg-row">
-        <div class="col-md-3 mx-auto text-left">
-          <h3>fCC Project - Stock Price Checker</h3>
-          <div class="proj-img-wrap col-md-9 mx-auto mobile bg-light my-3">
-            <a href="https://fcc-stock-price-checker-tf.glitch.me" target="_blank"><img src="stockPriceChecker.PNG"></img></a>
+      </section>
+      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
+        <div class="col-lg-9 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row">
+            <div class="col-md-3 mx-auto text-left">
+              <h3>fCC Project - Stock Price Checker</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+                <a href="https://fcc-stock-price-checker-tf.glitch.me" target="_blank"><img class="w-100" src="stockPriceChecker.PNG"></img></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+              </ul>
+            </div>
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+              <iframe
+                src="https://glitch.com/embed/#!/embed/fcc-stock-price-checker-tf?path=package.json&previewSize=100"
+                title="fcc-stock-price-checker-tf on Glitch"
+                allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+                style="height: 100%; width: 100%; border: 0;">
+              </iframe>
+            </div>
           </div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
-          <ul>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
-          </ul>
         </div>
-        <div class="glitch-embed-wrap col-md-9 mx-auto desktop">
-          <iframe
-            src="https://glitch.com/embed/#!/embed/fcc-stock-price-checker-tf?path=package.json&previewSize=100"
-            title="fcc-stock-price-checker-tf on Glitch"
-            allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-            style="height: 100%; width: 100%; border: 0;">
-          </iframe>
+      </section>
+      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#f6edcb">
+        <div class="col-lg-9 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row">
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+              <iframe
+                src="https://glitch.com/embed/#!/embed/fcc-exercise-tracker-rest-api-tf?path=README.md&previewSize=100"
+                title="fcc-exercise-tracker-rest-api-tf on Glitch"
+                allow="geolocation; microphone; camera; midi; vr; encrypted-media"
+                style="height: 100%; width: 100%; border: 0;">
+              </iframe>
+            </div>
+            <div class="col-md-3 mx-auto text-left">
+              <h3>fCC Project - Exercise Tracker</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+                <a href="https://fcc-exercise-tracker-rest-api-tf.glitch.me" target="_blank"><img class="w-100" src="exerciseTracker.PNG"></img></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
+        <div class="col-lg-9 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row">
+            <div class="col-md-3 mx-auto text-left">
+              <h3>fCC Project - Choropleth Map</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+                <a href="https://codepen.io/tfox121/pen/pozXqrW" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.pozXqrW.efb02a1f-c888-4df7-a179-a44e9b828023.png"></img></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+              </ul>
+            </div>
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+              <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Choropleth Map" src="https://codepen.io/tfox121/embed/preview/pozXqrW?height=790&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href='https://codepen.io/tfox121/pen/pozXqrW'>FCC: Choropleth Map</a> by tfox121
+                (<a href='https://codepen.io/tfox121'>@tfox121</a>) on <a href='https://codepen.io'>CodePen</a>.
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="jsCalculator" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+        <div class="col-lg-9 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row">
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+              <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Javascript Calculator " src="https://codepen.io/tfox121/embed/preview/MNJZap?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href='https://codepen.io/tfox121/pen/MNJZap'>FCC: Javascript Calculator </a> by tfox121
+                (<a href='https://codepen.io/tfox121'>@tfox121</a>) on <a href='https://codepen.io'>CodePen</a>.
+              </iframe>
+            </div>
+            <div class="col-md-3 mx-auto text-left">
+              <h3>fCC Project - JavaScript Calculator</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+                <a href="https://codepen.io/tfox121/pen/MNJZap" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.MNJZap.e7f8e4ba-ce8f-43f0-a5a9-7c6151315763.png"></img></a>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
-  </section>
-  <section id="exerciseTracker" class="section d-flex justify-content-center py-5" data-color="#f6edcb">
-    <div class="col-lg-9 my-auto">
-      <div class="project-wrapper row card bg-dark flex-lg-row">
-        <div class="glitch-embed-wrap col-md-9 mx-auto desktop">
-          <iframe
-              src="https://glitch.com/embed/#!/embed/fcc-exercise-tracker-rest-api-tf?path=README.md&previewSize=100"
-              title="fcc-exercise-tracker-rest-api-tf on Glitch"
-              allow="geolocation; microphone; camera; midi; vr; encrypted-media"
-              style="height: 100%; width: 100%; border: 0;">
-          </iframe>
-        </div>
-        <div class="col-md-3 mx-auto text-left">
-        <h3>fCC Project - Exercise Tracker</h3>
-        <div class="proj-img-wrap col-md-9 mx-auto mobile bg-light my-3">
-          <a href="https://fcc-exercise-tracker-rest-api-tf.glitch.me" target="_blank"><img src="exerciseTracker.PNG"></img></a>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
-        <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="choroplethMap" class="section d-flex justify-content-center py-5" data-color="#cbf1f6">
-    <div class="col-lg-9 my-auto">
-      <div class="project-wrapper row card bg-dark flex-lg-row">
-        <div class="col-md-3 mx-auto text-left">
-        <h3>fCC Project - Choropleth Map</h3>
-        <div class="proj-img-wrap col-md-9 mx-auto mobile bg-light my-3">
-          <a href="https://codepen.io/tfox121/pen/pozXqrW" target="_blank"><img src="https://screenshot.codepen.io/3285860.pozXqrW.efb02a1f-c888-4df7-a179-a44e9b828023.png"></img></a>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
-        <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
-        </ul>
-        </div>
-        <div class="glitch-embed-wrap col-md-9 mx-auto desktop">
-          <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Choropleth Map" src="https://codepen.io/tfox121/embed/preview/pozXqrW?height=790&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/tfox121/pen/pozXqrW'>FCC: Choropleth Map</a> by tfox121
-            (<a href='https://codepen.io/tfox121'>@tfox121</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="jsCalculator" class="section d-flex justify-content-center py-5" data-color="#f6d7cb">
-    <div class="col-lg-9 my-auto">
-      <div class="project-wrapper row card bg-dark flex-lg-row">
-        <div class="glitch-embed-wrap col-md-9 mx-auto desktop">
-          <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Javascript Calculator " src="https://codepen.io/tfox121/embed/preview/MNJZap?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-            See the Pen <a href='https://codepen.io/tfox121/pen/MNJZap'>FCC: Javascript Calculator </a> by tfox121
-            (<a href='https://codepen.io/tfox121'>@tfox121</a>) on <a href='https://codepen.io'>CodePen</a>.
-          </iframe>
-        </div>
-        <div class="col-md-3 mx-auto text-left">
-        <h3>fCC Project - JavaScript Calculator</h3>
-        <div class="proj-img-wrap col-md-9 mx-auto mobile bg-light my-3">
-          <a href="https://codepen.io/tfox121/pen/MNJZap" target="_blank"><img src="https://screenshot.codepen.io/3285860.MNJZap.e7f8e4ba-ce8f-43f0-a5a9-7c6151315763.png"></img></a>
-        </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
-        <ul>
-        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-        <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
-        </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-  </div>
   </body>
   <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
