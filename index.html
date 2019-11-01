@@ -51,7 +51,8 @@
       <section id="welcomeSection" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
         <div class="col-lg-6 my-auto">
           <h1>Tom Fox</h1>
-          <div id="skillsWrapper" class="row justify-content-center p-4 bg-dark shadow rounded m-3">
+          <p id="bio" class="row justify-content-center p-4 m-3">I am an experienced general manager from the hospitality sector based in Manchester and I'm looking to start my career in web development. I've been learning primarily using freeCodeCamp and other free online resources and I'm excited to put my hard-earned skills to work.</p>
+          <div id="skillsWrapper" class="row justify-content-center p-4 mb-5 bg-dark shadow rounded m-3">
             <div class="col-sm-6 pb-5 pt-4">
               <h2 class="pb-4">Front End</h2>
               <div class="skills">
@@ -76,30 +77,31 @@
             <div class="col-sm-6 pb-5 pt-4">
               <h2 class="pb-4">Back End</h2>
               <div class="skills">
-                <!-- HTML -->
+                <!-- Node -->
                 <i class="devicon-nodejs-plain"></i>
-                <!-- CSS -->
+                <!-- Express -->
                 <i class="devicon-express-original"></i>
-                <!-- SASS -->
+                <!-- MongoDB -->
                 <i class="devicon-mongodb-plain-wordmark"></i>
-                <!-- Bootstrap -->
+                <!-- PostegreSQL -->
                 <i class="devicon-postgresql-plain-wordmark"></i>
-                <!-- Javascript -->
+                <!-- Mocha -->
                 <i class="devicon-mocha-plain"></i>
-                <!-- JQuery -->
+                <!-- Drupal -->
                 <i class="devicon-drupal-plain-wordmark"></i>
-                <!-- ReactJS -->
+                <!-- Linux -->
                 <i class="devicon-linux-plain"></i>
-                <!-- Redux -->
+                <!-- Git -->
                 <i class="devicon-git-plain"></i>
               </div>
             </div>
           </div>
+          <button id="scrollHint" class="" onclick="scrollHandler('toDoList')"><i class="fas fa-chevron-down"></i></button>
         </div>
       </section>
       <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
         <div class="col-lg-9 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
               <iframe
                 src="https://glitch.com/embed/#!/embed/todo-list-tf?path=package.json&previewSize=100"
@@ -108,33 +110,41 @@
                 style="height: 100%; width: 100%; border: 0;">
               </iframe>
             </div>
-            <div class="col-md-3 mx-auto text-left">
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>Personal Project - To Do List</h3>
               <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
                 <a href="https://todo-list-tf.glitch.me" target="_blank"><img class="w-100" src="toDoList.PNG"></img></a>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <p>I decided to build my first app from the ground up using Node/Express along with MongoDB Atlas for the database. I also took the opportunity to learn Nunjucks and implement it in the project.<br><br>I <a href="https://trello.com/b/kGcryyi7/coding-practice-todolist-app" target="_blank">used Trello</a> to plan my workflow which helped me get a better understanding of the platform.</p>
               <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>Nunjucks</li>
+                <li>MongoDB</li>
+                <li>Bootstrap</li>
+                <li>Trello</li>
               </ul>
+              <a id="githubLink" class="btn mt-auto text-decoration-none row" href="https://github.com/tfox121/toDoList" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
             </div>
           </div>
         </div>
       </section>
-      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
+      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#f6edcb">
         <div class="col-lg-9 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row">
-            <div class="col-md-3 mx-auto text-left">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - Stock Price Checker</h3>
               <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
                 <a href="https://fcc-stock-price-checker-tf.glitch.me" target="_blank"><img class="w-100" src="stockPriceChecker.PNG"></img></a>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <p>This is the fCC project that took me the longest to complete. The most difficult element was creating the unique "Stock Likes" per IP functionality. I acheived it by logging IPs as a subdocument of the Stock item whenever a "Like" is submitted and checking all "Likes" against the logged IPs, giving me a degree of session management. It was also a good exercise in using another website's API in my code</p>
               <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>MongoDB</li>
+                <li>Mocha</li>
               </ul>
+              <a id="githubLink" class="btn mt-auto text-decoration-none row" href="https://github.com/tfox121/fcc-stock-price-checker" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
             </div>
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
               <iframe
@@ -147,9 +157,9 @@
           </div>
         </div>
       </section>
-      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#f6edcb">
+      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
         <div class="col-lg-9 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
               <iframe
                 src="https://glitch.com/embed/#!/embed/fcc-exercise-tracker-rest-api-tf?path=README.md&previewSize=100"
@@ -158,32 +168,33 @@
                 style="height: 100%; width: 100%; border: 0;">
               </iframe>
             </div>
-            <div class="col-md-3 mx-auto text-left">
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - Exercise Tracker</h3>
               <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
                 <a href="https://fcc-exercise-tracker-rest-api-tf.glitch.me" target="_blank"><img class="w-100" src="exerciseTracker.PNG"></img></a>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <p>This was the first project that got me working with MongoDB/Mongoose in conjunction with Express in a more in-depth way. It helped to give me a much better sense of how no-SQL databases can be used to handle user data</p>
               <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>MongoDB</li>
               </ul>
-            </div>
+              <a id="githubLink" class="btn mt-auto text-decoration-none row" href="https://github.com/tfox121/fcc-exercise-tracker-rest-api" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
+            </div>  
           </div>
         </div>
       </section>
       <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
         <div class="col-lg-9 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left">
               <h3>fCC Project - Choropleth Map</h3>
               <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
                 <a href="https://codepen.io/tfox121/pen/pozXqrW" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.pozXqrW.efb02a1f-c888-4df7-a179-a44e9b828023.png"></img></a>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <p>This project took quite a lot of reading around to be able to even start as choropleths weren't covered in the fCC syllabus.<br><br>The colour scale was a lot easier to implement on this project after all the reading and testing I'd done to figure out the colouring for the heatmap project beforehand (see <a href="https://codepen.io/tfox121/pen/vYBwQyV" target="_blank">here</a>).<br><br>It was an incredibly satisfying project to bring together as it gave me a real appreciation for what even a few lines of code can do with a large amount of real data</p>
               <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+                <li>d3</li>
               </ul>
             </div>
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
@@ -197,23 +208,24 @@
       </section>
       <section id="jsCalculator" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
         <div class="col-lg-9 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row">
-            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block ">
               <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Javascript Calculator " src="https://codepen.io/tfox121/embed/preview/MNJZap?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
                 See the Pen <a href='https://codepen.io/tfox121/pen/MNJZap'>FCC: Javascript Calculator </a> by tfox121
                 (<a href='https://codepen.io/tfox121'>@tfox121</a>) on <a href='https://codepen.io'>CodePen</a>.
               </iframe>
             </div>
-            <div class="col-md-3 mx-auto text-left">
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - JavaScript Calculator</h3>
               <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
                 <a href="https://codepen.io/tfox121/pen/MNJZap" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.MNJZap.e7f8e4ba-ce8f-43f0-a5a9-7c6151315763.png"></img></a>
               </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacinia in odio non imperdiet. Maecenas pretium euismod porta. Nullam at velit in nulla dictum facilisis eget vel purus.</p>
+              <p>One of the first projects that really tested me. Looking back at my work I can see a lot of things that I'd do differently, but it was a great way to learn more about asynchronous programming, especially in relation to React and managing state.<br><br>One of the hardest parts of the project way putting together the logic to be able to handle the contextual interpretation of the use of the minus button. A simple +/- toggle would have been a lot easier, but that's not what fCC's testing called for!</p>
               <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Mauris eu risus ut magna dignissim fermentum id eu tellus.</li>
+                <li>React</li>
+                <li>JavaScript</li>
               </ul>
+              <a id="githubLink" class="btn mt-auto text-decoration-none row" href="https://github.com/tfox121/javascriptCalculator" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
             </div>
           </div>
         </div>
