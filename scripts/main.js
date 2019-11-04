@@ -1,3 +1,35 @@
+const contactSend = () => {
+  event.preventDefault()
+  console.log("Submitted!")
+  const contactName = document.getElementById('contactName').value
+  const contactEmail = document.getElementById('contactEmail').value
+  const contactMessage = document.getElementById('contactMessage').value
+  
+  const url = 'https://1phpweao0k.execute-api.eu-west-1.amazonaws.com/dev/contact';
+  const data = { name: contactName, email: contactEmail, message: contactMessage };
+
+  let fetchData = { 
+    method: 'POST',
+    body: JSON.stringify(data),
+  }
+
+
+  fetch(url, fetchData)
+    .then(function(response) {
+      console.log("SUCCESS")
+      console.log(response)
+      return response.json()
+    })
+    .then((data) => {
+      console.log(data)
+      document.getElementById('contactResponse').innerHTML = data.message
+    })
+    .catch(function(error) {
+      console.error(error)
+    });   
+}
+
+
 const openNav = () => {
   // Close side nav if open
   if (document

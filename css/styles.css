@@ -47,7 +47,7 @@ section {
   padding-bottom: 2vh;
   margin-right:auto;
   margin-left:auto;
-}
+} 
 
 section .project-wrapper {
   padding: 3em 2em 3em 2em;
@@ -66,6 +66,11 @@ h3 {
 
 .project-wrapper ul {
   margin-left: -1em;
+}
+
+#contactMessage {
+  width: 50em;
+  height: 5em
 }
 
 /* NAV ELEMENTS */
