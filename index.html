@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tom Fox Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
-    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel='stylesheet' href='css/styles.css' type='text/css'>
   </head>
@@ -16,13 +16,16 @@
       <button class="navheader" onclick="scrollHandler('welcomeSection')">Welcome</button>
       <hr>
       <p class="navheader text-nowrap">Personal Projects</p>
+      <button class="text-nowrap" onclick="scrollHandler('portfolio')">This Portfolio</button>
       <button class="text-nowrap" onclick="scrollHandler('toDoList')">To Do List</button>
       <hr>
       <p class="navheader text-nowrap">freeCodeCamp Projects</p>
       <button class="text-nowrap" onclick="scrollHandler('stockPriceChecker')">Stock Price Checker</button>
       <button class="text-nowrap" onclick="scrollHandler('exerciseTracker')">Exercise Tracker</button>
-      <button class="text-nowrap" onclick="scrollHandler('choroplethMap')">Chloropleth Map</button>
+      <button class="text-nowrap" onclick="scrollHandler('choroplethMap')">Choropleth Map</button>
       <button class="text-nowrap" onclick="scrollHandler('jsCalculator')">JavaScript Calculator</button>
+      <hr>
+      <button class="text-nowrap" onclick="scrollHandler('contactForm')">Get in Touch</button>
     </div>
     <nav id="topNav" class="top-nav navbar navbar-expand-lg bg-dark fixed-top">
       <ul class="navbar-nav mr-auto">
@@ -44,15 +47,17 @@
           <li class="nav-item">
             <a class="nav-link" href="https://www.freecodecamp.org/tfox121" target="_blank">freeCodeCamp</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" onclick="scrollHandler('contactForm')">Message me!</a>
+          </li>
         </ul>
       </div>
     </nav>
-    <div class="" id="main">
       <section id="welcomeSection" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
-        <div class="col-lg-6 my-auto">
+        <div class="col-xl-6 col-lg-8 col-md-10 my-auto py-4">
           <h1>Tom Fox</h1>
           <p id="bio" class="row justify-content-center p-4 m-3">I am an experienced general manager from the hospitality sector based in Manchester and I'm looking to start my career in web development. I've been learning primarily using freeCodeCamp and other free online resources and I'm excited to put my hard-earned skills to work.</p>
-          <div id="skillsWrapper" class="row justify-content-center p-4 mb-5 bg-dark shadow rounded m-3">
+          <div id="skillsWrapper" class="row justify-content-center p-4 mb-5 bg-dark shadow rounded m-3 d-none d-md-flex">
             <div class="col-sm-6 pb-5 pt-4">
               <h2 class="pb-4">Front End</h2>
               <div class="skills">
@@ -96,11 +101,148 @@
               </div>
             </div>
           </div>
-          <button id="scrollHint" class="" onclick="scrollHandler('toDoList')"><i class="fas fa-chevron-down"></i></button>
+          <div id="skillsWrapperMob" class="carousel slide justify-content-center p-4 mb-5 bg-dark shadow rounded m-3 d-md-none d-flex" data-ride="carousel">
+            <ul class="carousel-indicators">
+              <li data-target="#skillsWrapperMob" data-slide-to="0" class="active"></li>
+              <li data-target="#skillsWrapperMob" data-slide-to="1"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div class="pb-5 pt-4 carousel-item active">
+                <h2 class="pb-4">Front End</h2>
+                <div class="skills">
+                  <!-- HTML -->
+                  <i class="devicon-html5-plain-wordmark"></i>
+                  <!-- CSS -->
+                  <i class="devicon-css3-plain-wordmark"></i>
+                  <!-- SASS -->
+                  <i class="devicon-sass-original"></i>
+                  <!-- d3 -->
+                  <i class="devicon-d3js-plain"></i>
+                  <!-- Javascript -->
+                  <i class="devicon-javascript-plain"></i>
+                  <!-- JQuery -->
+                  <i class="devicon-jquery-plain-wordmark"></i>
+                  <!-- ReactJS -->
+                  <i class="devicon-react-original-wordmark"></i>
+                  <!-- Redux -->
+                  <span class="iconify" data-icon="simple-icons:redux" data-inline="false"></span>
+                </div>
+              </div>
+              <div class="col-sm-6 pb-5 pt-4 carousel-item">
+                <h2 class="pb-4">Back End</h2>
+                <div class="skills">
+                  <!-- Node -->
+                  <i class="devicon-nodejs-plain"></i>
+                  <!-- Express -->
+                  <i class="devicon-express-original"></i>
+                  <!-- MongoDB -->
+                  <i class="devicon-mongodb-plain-wordmark"></i>
+                  <!-- PostegreSQL -->
+                  <i class="devicon-postgresql-plain-wordmark"></i>
+                  <!-- Mocha -->
+                  <i class="devicon-mocha-plain"></i>
+                  <!-- Drupal -->
+                  <i class="devicon-drupal-plain-wordmark"></i>
+                  <!-- Linux -->
+                  <i class="devicon-linux-plain"></i>
+                  <!-- Git -->
+                  <i class="devicon-git-plain"></i>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#skillsWrapperMob" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#skillsWrapperMob" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+          </div>
+          <button id="scrollHint" class="" onclick="scrollHandler('portfolio')"><i class="fas fa-chevron-down"></i></button>
         </div>
       </section>
-      <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
-        <div class="col-lg-9 my-auto">
+      <section id="portfolio" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
+            <div id="portfolioCarousel" class="carousel slide glitch-embed-wrap col-md-9 mx-auto d-none d-md-block" data-ride="carousel">
+              <div class="carousel-inner">
+                <div id="carousel-item" class="carousel-item active">
+                  <iframe
+                      src="https://glitch.com/embed/#!/embed/tf-portfolio?path=scripts/main.js&previewSize=0"
+                      title="tf-portfolio on Glitch"
+                      allow="geolocation; microphone; camera; midi; vr; encrypted-media">
+                  </iframe>
+                  <div id="carousel-caption" class="carousel-caption">
+                    <h2>FRONT END</h2>
+                  </div>
+                </div>
+                <div id="carousel-item" class="carousel-item">
+                  <iframe
+                    src="https://glitch.com/embed/#!/embed/tf-portfolio-contact?path=contactForm.js&previewSize=0"
+                    title="tf-portfolio-contact on Glitch"
+                    allow="geolocation; microphone; camera; midi; vr; encrypted-media">
+                  </iframe>
+                  <div id="carousel-caption" class="carousel-caption">
+                    <h2>BACK END</h2>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#portfolioCarousel" role="button" data-slide="prev">
+                <span id="carousel-control-prev-icon" class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#portfolioCarousel" role="button" data-slide="next">
+                <span id="carousel-control-prev-icon" class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
+              <h3>Personal Project - This Portfolio!</h3>
+                <div id="portfolioCarouselMob" class="carousel slide proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block" data-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="https://tf-portfolio.glitch.me" target="_blank"><img class="w-100" src="images/portfolio.PNG"></img></a>
+                      <div id="mob-carousel-caption" class="carousel-caption">
+                        <h2>FRONT END</h2>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="https://glitch.com/edit/#!/tf-portfolio-contact" target="_blank"><img class="w-100" src="images/portfolioContactLambda.PNG"></img></a>
+                      <div id="mob-carousel-caption" class="carousel-caption">
+                        <h2>BACK END</h2>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#portfolioCarouselMob" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#portfolioCarouselMob" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              <p>I built most of this site using Bootstrap with a bit of custom CSS and JavaScript. As a challenge I took a dive into the world of cloud computing and set up an AWS API Gateway connected to an AWS lambda function using Serverless in order to handle my contact form's back end. I then set up Amazon SES to email any sent messages through to me.</p>
+              <ul>
+                <li>Node</li>
+                <li>Amazon Web Services</li>
+                <li>Serverless</li>
+                <li>Bootstrap</li>
+              </ul>
+              <div class="dropdown mt-auto row">
+                <button type="button" id="githubLink" class="btn dropdown-toggle w-100" data-toggle="dropdown">
+                  <i class="fab fa-github"></i> See it on Github
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="https://github.com/tfox121/tfox121.github.io" target="_blank">Front End</a>
+                  <a class="dropdown-item" href="https://github.com/tfox121/contactFormLambda" target="_blank">Back End</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#f6edcb">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
               <iframe
@@ -112,8 +254,8 @@
             </div>
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>Personal Project - To Do List</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
-                <a href="https://todo-list-tf.glitch.me" target="_blank"><img class="w-100" src="toDoList.PNG"></img></a>
+              <div class="proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block">
+                <a href="https://todo-list-tf.glitch.me" target="_blank"><img class="w-100" src="images/toDoList.PNG"></img></a>
               </div>
               <p>I decided to build my first app from the ground up using Node/Express along with MongoDB Atlas for the database. I also took the opportunity to learn Nunjucks and implement it in the project.<br><br>I <a href="https://trello.com/b/kGcryyi7/coding-practice-todolist-app" target="_blank">used Trello</a> to plan my workflow which helped me get a better understanding of the platform.</p>
               <ul>
@@ -129,13 +271,13 @@
           </div>
         </div>
       </section>
-      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#f6edcb">
-        <div class="col-lg-9 my-auto">
+      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - Stock Price Checker</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
-                <a href="https://fcc-stock-price-checker-tf.glitch.me" target="_blank"><img class="w-100" src="stockPriceChecker.PNG"></img></a>
+              <div class="proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block">
+                <a href="https://fcc-stock-price-checker-tf.glitch.me" target="_blank"><img class="w-100" src="images/stockPriceChecker.PNG"></img></a>
               </div>
               <p>This is the fCC project that took me the longest to complete. The most difficult element was creating the unique "Stock Likes" per IP functionality. I acheived it by logging IPs as a subdocument of the Stock item whenever a "Like" is submitted and checking all "Likes" against the logged IPs, giving me a degree of session management. It was also a good exercise in using another website's API in my code</p>
               <ul>
@@ -157,8 +299,8 @@
           </div>
         </div>
       </section>
-      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
-        <div class="col-lg-9 my-auto">
+      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
               <iframe
@@ -170,8 +312,8 @@
             </div>
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - Exercise Tracker</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
-                <a href="https://fcc-exercise-tracker-rest-api-tf.glitch.me" target="_blank"><img class="w-100" src="exerciseTracker.PNG"></img></a>
+              <div class="proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block">
+                <a href="https://fcc-exercise-tracker-rest-api-tf.glitch.me" target="_blank"><img class="w-100" src="images/exerciseTracker.PNG"></img></a>
               </div>
               <p>This was the first project that got me working with MongoDB/Mongoose in conjunction with Express in a more in-depth way. It helped to give me a much better sense of how no-SQL databases can be used to handle user data</p>
               <ul>
@@ -184,12 +326,12 @@
           </div>
         </div>
       </section>
-      <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
-        <div class="col-lg-9 my-auto">
+      <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left">
               <h3>fCC Project - Choropleth Map</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+              <div class="proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block">
                 <a href="https://codepen.io/tfox121/pen/pozXqrW" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.pozXqrW.efb02a1f-c888-4df7-a179-a44e9b828023.png"></img></a>
               </div>
               <p>This project took quite a lot of reading around to be able to even start as choropleths weren't covered in the fCC syllabus.<br><br>The colour scale was a lot easier to implement on this project after all the reading and testing I'd done to figure out the colouring for the heatmap project beforehand (see <a href="https://codepen.io/tfox121/pen/vYBwQyV" target="_blank">here</a>).<br><br>It was an incredibly satisfying project to bring together as it gave me a real appreciation for what even a few lines of code can do with a large amount of real data</p>
@@ -206,8 +348,8 @@
           </div>
         </div>
       </section>
-      <section id="jsCalculator" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
-        <div class="col-lg-9 my-auto">
+      <section id="jsCalculator" class="d-flex justify-content-center py-5" data-color="#f6edcb">
+        <div class="col-xl-9 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block ">
               <iframe height="100%" style="width: 100%;" scrolling="no" title="FCC: Javascript Calculator " src="https://codepen.io/tfox121/embed/preview/MNJZap?height=265&theme-id=light&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
@@ -217,7 +359,7 @@
             </div>
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
               <h3>fCC Project - JavaScript Calculator</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto my-3 d-md-none d-block">
+              <div class="proj-img-wrap col-md-9 mx-auto mb-3 d-md-none d-block">
                 <a href="https://codepen.io/tfox121/pen/MNJZap" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.MNJZap.e7f8e4ba-ce8f-43f0-a5a9-7c6151315763.png"></img></a>
               </div>
               <p>One of the first projects that really tested me. Looking back at my work I can see a lot of things that I'd do differently, but it was a great way to learn more about asynchronous programming, especially in relation to React and managing state.<br><br>One of the hardest parts of the project way putting together the logic to be able to handle the contextual interpretation of the use of the minus button. A simple +/- toggle would have been a lot easier, but that's not what fCC's testing called for!</p>
@@ -230,10 +372,50 @@
           </div>
         </div>
       </section>
-    </div>
+      <section id="contactForm" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
+        <div class="col-lg-6 col-md-9 col-sm-11 my-auto">
+          <div class="project-wrapper flex-column card bg-dark flex-row shadow">
+              <h3>Get in Touch!</h3>
+              <form id="contactForm" class="mb-4" onsubmit="contactSend()">
+                    <!-- Real form -->
+                  <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" autocomplete="name" id="contactNamegtyh" name="contactNamegtyh" class="form-control" required>
+                            <label for="name" class="">Your name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <input type="text" autocomplete="email" id="contactEmailgtyh" name="contactEmailgtyh" class="form-control" required>
+                            <label for="email" class="">Your email address</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form">
+                            <textarea type="text" id="contactMessagegtyh" name="contactMessagegtyh" class="form-control md-textarea" maxlength="500" required></textarea>
+                            <label for="message">Your message</label>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Honeypot -->
+                <label class="ohnohoney" for="name"></label>
+                <input class="ohnohoney" autocomplete="off" type="text" id="name" name="name" placeholder="Your name here" >
+                <label class="ohnohoney" for="email"></label>
+                <input class="ohnohoney" autocomplete="off" type="email" id="email" name="email" placeholder="Your e-mail here">
+              </form>
+              <button id="contactSend" class="btn mt-auto text-decoration-none row mx-1" onclick="contactSend()">Send</button>
+              <div id="contactResponse"></div>
+          </div>
+        </div>
+        
+      </section>
   </body>
   <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src='scripts/main.js'></script>
 </html>
