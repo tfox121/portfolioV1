@@ -27,10 +27,11 @@ h2 {
 }
 
 #scrollHint {
-  position: fixed;
+  position: absolute;
   color: #292b2c;
   left: 0;
   right: 0;
+  bottom: -8vh;
   font-size: 3em;
   min-height: 10vh;
   width: 100%;
@@ -61,16 +62,57 @@ h3 {
 .glitch-embed-wrap {
   height: 75vh;
   min-height: 30em;
-  width: 90%;
+  width: 90%; 
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#carousel-item {
+  height: 75vh;
+  min-height: 30em;
+  width: 100%;
+}
+
+#carousel-caption {
+  color: black;
+  font-size: 0.8em;
+  transform: translateY(47%);
+}
+
+#mob-carousel-caption {
+  color: white;
+  transform: translateY(47%);
+  font-size: 0.5em;
+}
+
+#carousel-control-prev-icon,
+#carousel-control-next-icon {
+  height: 2rem;
+  width: 2rem;
+  outline: black;
+  background-size: 100%, 100%;
+  filter: invert(100%);
 }
 
 .project-wrapper ul {
   margin-left: -1em;
 }
 
-#contactMessage {
-  width: 50em;
-  height: 5em
+div .md-textarea {
+  height: 10em;
+}
+
+#contactForm input, #contactForm textarea {
+  border: none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 
 /* NAV ELEMENTS */
@@ -139,17 +181,56 @@ button {
 	outline: inherit;
 }
 
-button:focus {
+button:focus, .btn:focus {
   outline: none;
-  border: none;
+  box-shadow: none;
+  color: initial;
 }
 
-a {
+a, .dropdown-item {
   color: inherit;
   text-decoration: underline;
 }
 
-a:hover {
+a:hover, a:focus, .dropdown-item:focus, .dropdown-item:hover {
   color: inherit;
   text-decoration: none;
+  background-color: inherit;
 }
+
+/* Hide form honeypot */
+
+.ohnohoney{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+@media all and (max-width: 5000px) { /* screen size until 5000px */
+  body {
+      font-size: 1.3em;
+  }
+}
+@media all and (max-width: 1440px) { /* screen size until 1200px */
+  body {
+      font-size: 0.9em;
+  }
+}
+@media all and (max-width: 1200px) { /* screen size until 1200px */
+  body {
+      font-size: 0.85em;
+  }
+}
+@media all and (max-width: 1044px) { /* screen size until 1000px */
+  body {
+      font-size: 0.85em;
+      }
+  }
+@media all and (max-width: 500px) { /* screen size until 500px */
+  body {
+      font-size: 0.9em;
+      }
+  }

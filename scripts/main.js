@@ -1,9 +1,9 @@
 const contactSend = () => {
   event.preventDefault()
   console.log("Submitted!")
-  const contactName = document.getElementById('contactName').value
-  const contactEmail = document.getElementById('contactEmail').value
-  const contactMessage = document.getElementById('contactMessage').value
+  const contactName = document.getElementById('contactNamegtyh').value
+  const contactEmail = document.getElementById('contactEmailgtyh').value
+  const contactMessage = document.getElementById('contactMessagegtyh').value
   
   const url = 'https://1phpweao0k.execute-api.eu-west-1.amazonaws.com/dev/contact';
   const data = { name: contactName, email: contactEmail, message: contactMessage };
@@ -55,10 +55,6 @@ const openNav = () => {
     .getElementById("sideNav")
     .style
     .width = "12em"
-  document
-    .getElementById("main")
-    .style
-    .marginLeft = "12em"
   const sections = document.querySelectorAll('section')
   Array
     .from(sections)
@@ -72,10 +68,6 @@ const closeNav = () => {
     .getElementById("sideNav")
     .style
     .width = "0"
-  document
-    .getElementById("main")
-    .style
-    .marginLeft = "0"
   document.body.style.backgroundColor = "#cbf1f6"
   const sections = document.querySelectorAll('section')
   Array
@@ -105,6 +97,7 @@ const scrollHandler = (elementId) => {
   const elmnt = document.getElementById(elementId)
   elmnt.scrollIntoView({ behavior: 'smooth', block: 'center' })
   closeNav()
+  closeContacts()
 }
 
 // Change colour of nav elements according to window location
@@ -137,9 +130,15 @@ const colorSetter = () => {
     section.style.backgroundColor = section.getAttribute('data-color')
     section.style.color = section.getAttribute('data-color')
     Array
-    .from(section.querySelectorAll('#githubLink'))
+    .from(section.querySelectorAll('#githubLink, #contactSend, .dropdown-menu'))
     .forEach((element) => {
       element.style.backgroundColor = section.getAttribute('data-color')
+    })
+    Array
+    .from(section.querySelectorAll('input, textarea'))
+    .forEach((element) => {
+      element.style.borderBottom = `2px solid ${section.getAttribute('data-color')}`
+      element.style.color = section.getAttribute('data-color')
     })
   })
 }
@@ -198,12 +197,10 @@ const lookHere = () => {
 // Peek side nav element
 window.onload = () => {
   document.querySelectorAll('#sideNav')[0].style.transition = "1s"
-  document.querySelectorAll('#main')[0].style.transition = "margin-left 1s"
   openNav()
   setTimeout(() => {
     closeNav()
     document.querySelectorAll('#sideNav')[0].style.transition = "0.5s"
-    document.querySelectorAll('#main')[0].style.transition = "margin-left 0.5s"
   }, 2000)
   setTimeout(() => {
     lookHere()
