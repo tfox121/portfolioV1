@@ -138,6 +138,11 @@ const colorSetter = () => {
           element.style.borderBottom = `2px solid ${section.getAttribute('data-color')}`
           element.style.color = section.getAttribute('data-color')
         })
+      Array
+        .from(section.querySelectorAll('h4'))
+        .forEach((element) => {
+          element.style.color = section.getAttribute('data-color')
+        })
     })
 }
 

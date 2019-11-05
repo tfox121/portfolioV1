@@ -80,7 +80,7 @@ iframe {
 #portfolioCarousel > div > div > .carousel-caption {
   color: black;
   font-size: 0.8em;
-  transform: translateY(47%);
+  transform: translateY(40%);
 }
 
 #portfolioCarouselMob > div > div > .carousel-caption {
@@ -211,7 +211,7 @@ a:hover, a:focus, .dropdown-item:focus, .dropdown-item:hover {
 }
 @media all and (max-width: 5000px) { /* screen size until 5000px */
   body {
-      font-size: 1.3em;
+      font-size: 1.2em;
   }
 }
 @media all and (max-width: 1440px) { /* screen size until 1200px */
