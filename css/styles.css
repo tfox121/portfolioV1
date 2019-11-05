@@ -1,0 +1,236 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  color: #292b2c;
+}
+
+#welcomeSection > div > h1 {
+  font-size: 5em;
+  color: #292b2c;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+#bio {
+  color: #292b2c;
+}
+
+.skills {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  font-size: 3em;
+  grid-column-gap: 0.25em;
+  grid-row-gap: 0.5em;
+}
+
+#scrollHint {
+  position: absolute;
+  color: #292b2c;
+  left: 0;
+  right: 0;
+  bottom: -8vh;
+  font-size: 3em;
+  min-height: 10vh;
+  width: 100%;
+  padding-top: 1%;
+}
+
+section {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding-right: 2vw;
+  padding-left: 2vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  margin-right:auto;
+  margin-left:auto;
+} 
+
+section .project-wrapper {
+  padding: 3em 2em 3em 2em;
+}
+
+h3 {
+  font-size: 2em;
+  padding-bottom: 0.75em;
+}
+
+.glitch-embed-wrap {
+  height: 75vh;
+  min-height: 30em;
+  width: 90%; 
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#portfolioCarousel > div > .carousel-item {
+  height: 75vh;
+  min-height: 30em;
+  width: 100%;
+}
+
+#portfolioCarousel > div > div > .carousel-caption {
+  color: black;
+  font-size: 0.8em;
+  transform: translateY(47%);
+}
+
+#portfolioCarouselMob > div > div > .carousel-caption {
+  color: white;
+  transform: translateY(47%);
+  font-size: 0.5em;
+}
+
+#portfolioCarousel > a > .carousel-control-prev-icon,
+#portfolioCarousel > a > .carousel-control-next-icon {
+  height: 2rem;
+  width: 2rem;
+  outline: black;
+  background-size: 100%, 100%;
+  filter: invert(100%);
+}
+
+.project-wrapper ul {
+  margin-left: -1em;
+}
+
+div .md-textarea {
+  height: 10em;
+}
+
+#contactFormWrapper input, #contactFormWrapper textarea {
+  border: none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+/* NAV ELEMENTS */
+
+#topNav button, #topNav a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: black;
+}
+
+#topNav button:hover, #topNav a:hover {
+  color: #f1f1f1;
+}
+
+/* The side navigation menu */
+#sideNav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 80px;
+  transition: 0.5s;
+}
+
+#main {
+  transition: margin-left 0.5s;
+}
+
+.side-nav button {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  display: block;
+  transition: 0.3s;
+  text-align: initial;
+  line-height: 1.5em;
+}
+
+p.navheader, a.navheader {
+  font-size: 26px;
+}
+
+.side-nav p {
+  padding: 8px 8px 0px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  font-size: 0.8em;
+  transition: 0.3s;
+}
+
+.side-nav button:hover {
+  color: #f1f1f1;
+}
+
+/* Remove button styling */
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button:focus, .btn:focus {
+  outline: none;
+  box-shadow: none;
+  color: initial;
+}
+
+a, .dropdown-item {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover, a:focus, .dropdown-item:focus, .dropdown-item:hover {
+  color: inherit;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+/* Hide form honeypot */
+
+.ohnohoney{
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  z-index: -1;
+}
+@media all and (max-width: 5000px) { /* screen size until 5000px */
+  body {
+      font-size: 1.3em;
+  }
+}
+@media all and (max-width: 1440px) { /* screen size until 1200px */
+  body {
+      font-size: 0.9em;
+  }
+}
+@media all and (max-width: 1200px) { /* screen size until 1200px */
+  body {
+      font-size: 0.85em;
+  }
+}
+@media all and (max-width: 1044px) { /* screen size until 1000px */
+  body {
+      font-size: 0.85em;
+      }
+  }
+@media all and (max-width: 500px) { /* screen size until 500px */
+  body {
+      font-size: 0.9em;
+      }
+  }
