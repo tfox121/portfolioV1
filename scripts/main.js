@@ -5,7 +5,7 @@ const contactSend = () => {
   const contactEmail = document.getElementById('contactEmailgtyh').value
   const contactMessage = document.getElementById('contactMessagegtyh').value
 
-  const url = 'https://qnfwo92feh.execute-api.eu-west-1.amazonaws.com/prod/contact'
+  const url = 'https://1phpweao0k.execute-api.eu-west-1.amazonaws.com/dev/contact'
   const data = { name: contactName, email: contactEmail, message: contactMessage }
 
   const fetchData = {
@@ -200,14 +200,15 @@ const lookHere = () => {
   }, 1000)
 }
 
-// Peek side nav element
+// Auto peek elements on load
 window.onload = () => {
-  document.querySelectorAll('#sideNav')[0].style.transition = '1s'
-  openNav()
-  setTimeout(() => {
-    closeNav()
-    document.querySelectorAll('#sideNav')[0].style.transition = '0.5s'
-  }, 2000)
+  // Removed nav peek as it doesn't seem necessary. Un-comment below to re-enable
+  //  document.querySelectorAll('#sideNav')[0].style.transition = '1s'
+  //  openNav()
+  //  setTimeout(() => {
+  //   closeNav()
+  //   document.querySelectorAll('#sideNav')[0].style.transition = '0.5s'
+  // }, 2000)
   setTimeout(() => {
     lookHere()
   }, 3000)
