@@ -56,7 +56,7 @@ section .project-wrapper {
 
 h3 {
   font-size: 2em;
-  padding-bottom: 0.75em;
+  padding-bottom: 0.5em;
 }
 
 .glitch-embed-wrap {
@@ -71,6 +71,10 @@ iframe {
   border: none;
 }
 
+.project-wrapper > div > ul {
+  margin-bottom: 2em;
+}
+
 #portfolioCarousel > div > .carousel-item {
   height: 75vh;
   min-height: 30em;
@@ -81,6 +85,7 @@ iframe {
   color: black;
   font-size: 0.8em;
   transform: translateY(40%);
+  filter: opacity(66%);
 }
 
 #portfolioCarouselMob > div > div > .carousel-caption {
@@ -209,9 +214,15 @@ a:hover, a:focus, .dropdown-item:focus, .dropdown-item:hover {
   width: 0;
   z-index: -1;
 }
+
 @media all and (max-width: 5000px) { /* screen size until 5000px */
   body {
-      font-size: 1.2em;
+      font-size: 1.15em;
+  }
+}
+@media all and (max-width: 2400px) { /* screen size until 5000px */
+  body {
+      font-size: 1em;
   }
 }
 @media all and (max-width: 1440px) { /* screen size until 1200px */
