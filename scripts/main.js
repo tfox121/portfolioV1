@@ -5,7 +5,7 @@ const contactSend = () => {
   const contactEmail = document.getElementById('contactEmailgtyh').value
   const contactMessage = document.getElementById('contactMessagegtyh').value
 
-  const url = 'https://1phpweao0k.execute-api.eu-west-1.amazonaws.com/dev/contact'
+  const url = 'https://qnfwo92feh.execute-api.eu-west-1.amazonaws.com/prod/contact'
   const data = { name: contactName, email: contactEmail, message: contactMessage }
 
   const fetchData = {
