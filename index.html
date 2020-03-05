@@ -23,7 +23,7 @@
       <button class="text-nowrap" onclick="scrollHandler('stockPriceChecker')">Stock Price Checker</button>
       <button class="text-nowrap" onclick="scrollHandler('exerciseTracker')">Exercise Tracker</button>
       <button class="text-nowrap" onclick="scrollHandler('choroplethMap')">Choropleth Map</button>
-      <button class="text-nowrap" onclick="scrollHandler('jsCalculator')">JavaScript Calculator</button>
+      <button class="text-nowrap" onclick="scrollHandler('paceCalculator')">Pace Calculator</button>
       <hr>
       <button class="text-nowrap" onclick="scrollHandler('contactForm')">Get in Touch</button>
     </div>
@@ -160,7 +160,37 @@
           <button id="scrollHint" class="" onclick="scrollHandler('portfolio')"><i class="fas fa-chevron-down"></i></button>
         </div>
       </section>
-      <section id="portfolio" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+      <section id="paceCalculator" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+        <div class="col-xl-10 col-lg-11 col-12 my-auto">
+          <div class="project-wrapper row card bg-dark flex-row shadow">
+            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block ">
+              <iframe
+                src="https://glitch.com/embed/#!/embed/pace-calc?path=README.md&previewSize=100"
+                title="pace-calc on Glitch"
+                allow="geolocation; microphone; camera; midi; vr; encrypted-media">
+              </iframe>
+            </div>
+            <div class="col-md-3 mx-auto text-left d-flex flex-column">
+              <h3>Personal Project - Pace Calculator</h3>
+              <div class="proj-img-wrap col-md-9 mx-auto d-md-none d-block">
+                <a href="https://pace-calc.glitch.me/" target="_blank"><img class="w-100" src="images/paceCalc.PNG"></a>
+              </div>
+              <p class="link-caption text-center d-md-none d-block">tap picture to see more</p>
+              <p>One of my first projects that I undertook after embarking on a Udemy React course.
+              A simple tool created to spec for my girlfriend after her favourite pace calculator disappeared.
+              It was great to try another React project after gaining a much better understanding of the library, and I think it shows.<br><br>
+              On reflection, I think the automatic calculation/rendering and the toggles on each section that it necessitates to enable the user to reverse calculate actually makes the app less intuitive to use.
+              A button on each of the three main components to process the calculation would be a better approach, even if a little less elegant.</p>
+              <ul>
+                <li>React</li>
+                <li>JavaScript</li>
+              </ul>
+              <a class="githubLink btn mt-auto text-decoration-none row" href="https://github.com/tfox121/javascriptCalculator" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="d-flex justify-content-center py-5" data-color="#f6edcb">
         <div class="col-xl-10 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
@@ -243,7 +273,7 @@
           </div>
         </div>
       </section>
-      <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#f6edcb">
+      <section id="toDoList" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
         <div class="col-xl-10 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
@@ -273,7 +303,7 @@
           </div>
         </div>
       </section>
-      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#e2cbf6">
+      <section id="stockPriceChecker" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
         <div class="col-xl-10 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left d-flex flex-column">
@@ -301,7 +331,7 @@
           </div>
         </div>
       </section>
-      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#cbf1f6">
+      <section id="exerciseTracker" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
         <div class="col-xl-10 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block">
@@ -328,7 +358,7 @@
           </div>
         </div>
       </section>
-      <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#f6d7cb">
+      <section id="choroplethMap" class="d-flex justify-content-center py-5" data-color="#f6edcb">
         <div class="col-xl-10 col-lg-11 col-12 my-auto">
           <div class="project-wrapper row card bg-dark flex-row shadow">
             <div class="col-md-3 mx-auto text-left">
@@ -347,32 +377,6 @@
                 See the Pen <a href="https://codepen.io/tfox121/pen/pozXqrW">FCC: Choropleth Map</a> by tfox121
                 (<a href="https://codepen.io/tfox121">@tfox121</a>) on <a href="https://codepen.io">CodePen</a>.
               </iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="jsCalculator" class="d-flex justify-content-center py-5" data-color="#f6edcb">
-        <div class="col-xl-10 col-lg-11 col-12 my-auto">
-          <div class="project-wrapper row card bg-dark flex-row shadow">
-            <div class="glitch-embed-wrap col-md-9 mx-auto d-none d-md-block ">
-              <iframe
-                src="https://glitch.com/embed/#!/embed/fcc-javascriptcalculator-tf?path=src/index.js&previewSize=100"
-                title="fcc-javascriptcalculator-tf on Glitch"
-                allow="geolocation; microphone; camera; midi; vr; encrypted-media">
-              </iframe>
-            </div>
-            <div class="col-md-3 mx-auto text-left d-flex flex-column">
-              <h3>fCC Project - JavaScript Calculator</h3>
-              <div class="proj-img-wrap col-md-9 mx-auto d-md-none d-block">
-                <a href="https://fcc-javascriptcalculator-tf.glitch.me/" target="_blank"><img class="w-100" src="https://screenshot.codepen.io/3285860.MNJZap.e7f8e4ba-ce8f-43f0-a5a9-7c6151315763.png"></a>
-              </div>
-              <p class="link-caption text-center d-md-none d-block">tap picture to see more</p>
-              <p>One of the first projects that really tested me. Looking back at my work I can see a lot of things that I'd do differently, but it was a great way to learn more about asynchronous programming, especially in relation to React and managing state.<br><br>One of the hardest parts of the project way putting together the logic to be able to handle the contextual interpretation of the use of the minus button. A simple +/- toggle would have been a lot easier, but that's not what fCC's testing called for!</p>
-              <ul>
-                <li>React</li>
-                <li>JavaScript</li>
-              </ul>
-              <a class="githubLink btn mt-auto text-decoration-none row" href="https://github.com/tfox121/javascriptCalculator" target="_blank"><i class="fab fa-github"></i> See it on Github</a>
             </div>
           </div>
         </div>
